@@ -1,0 +1,122 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #8a2be2, #4b0082);
+    color: white;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.title {
+    font-size: 1.2em;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+}
+
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(75, 0, 130, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    color: white;
+}
+
+.side-menu a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 1.5em;
+    margin-left: 50px;
+}
+
+.menu-footer {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 1em;
+}
+
+.intro {
+    margin-top: 20px;
+    background-color: #4b0082;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.start-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #00f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.welcome {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #4b0082;
+    border-radius: 10px;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.option {
+    width: 45%;
+    margin-bottom: 10px;
+    background-color: #333;
+    padding: 10px;
+   
