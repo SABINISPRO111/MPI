@@ -25,8 +25,8 @@ header {
 }
 
 .logo {
-    font-size: 1.5em;
-    font-weight: bold;
+    width: 40px; /* Adjust as needed */
+    height: 40px; /* Adjust as needed */
 }
 
 .title {
@@ -119,4 +119,24 @@ header {
     margin-bottom: 10px;
     background-color: #333;
     padding: 10px;
-   
+    border-radius: 10px;
+    text-align: center;
+}
+
+.option img {
+    max-width: 50px;
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.bottom-nav a {
+    color: white;
+    text-decoration: none;
+}
