@@ -5,6 +5,7 @@ body {
     background: linear-gradient(to bottom, #8a2be2, #4b0082);
     color: white;
     text-align: center;
+    overflow: hidden; /* Hide overflow to prevent scroll during menu animation */
 }
 
 .container {
@@ -50,9 +51,16 @@ header {
     left: 0;
     background-color: rgba(75, 0, 130, 0.9);
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: width 0.5s ease-in-out;
     padding-top: 60px;
     color: white;
+    clip-path: circle(0% at 0 50%); /* Initial clip path */
+}
+
+.side-menu.open {
+    width: 75%; /* Adjust this value to control the width of the sidenav overlay */
+    clip-path: circle(150% at 0 50%); /* Final clip path */
+    transition: clip-path 0.5s ease-in-out; /* Transition for the clip path */
 }
 
 .side-menu a {
@@ -122,9 +130,9 @@ header {
 .option {
     background-color: #333;
     padding: 10px;
-    border-radius: 10px;
     flex: 1;
     text-align: center;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
 }
 
 .option img {
