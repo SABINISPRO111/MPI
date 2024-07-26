@@ -30,7 +30,7 @@ header {
 }
 
 .title {
-    font-size: 0.3em;
+    font-size: 1.2em;
 }
 
 .menu-btn {
@@ -107,16 +107,14 @@ header {
     border-radius: 10px;
 }
 
-.options {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
     margin-top: 10px;
 }
 
 .option {
-    width: 45%;
-    margin-bottom: 10px;
     background-color: #333;
     padding: 10px;
     border-radius: 10px;
