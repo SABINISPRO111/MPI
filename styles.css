@@ -58,7 +58,7 @@ header {
 }
 
 .side-menu.open {
-    width: 60%; /* Adjust this value to control the width of the sidenav overlay */
+    width: 15%; /* Adjust this value to control the width of the sidenav overlay */
     clip-path: circle(60% at 0 50%); /* Maintain half-circle shape */
 }
 
