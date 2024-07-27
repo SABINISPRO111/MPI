@@ -58,8 +58,18 @@ header {
 }
 
 .side-menu.open {
-    width: 15%; /* Adjust this value to control the width of the sidenav overlay */
-    clip-path: circle(60% at 0 50%); /* Maintain half-circle shape */
+    width: 25%; /* Adjust this value to control the width of the sidenav overlay */
+    clip-path: circle(150% at 0 50%); /* Circle transition for opening effect */
+    animation: expand 0.5s forwards; /* Adding animation */
+}
+
+@keyframes expand {
+    0% {
+        clip-path: circle(0% at 0 50%);
+    }
+    100% {
+        clip-path: inset(0 0 0 0); /* Transition to rectangular shape */
+    }
 }
 
 .side-menu a {
@@ -169,14 +179,15 @@ header {
 }
 
 /* Media Queries for Mobile Responsiveness */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .side-menu {
         width: 0;
-        clip-path: circle(0% at 0 25%);
+        clip-path: circle(0% at 0 50%);
     }
 
     .side-menu.open {
-        width: 15%; /* Adjusted width for better mobile fit */
-        clip-path: circle(5% at 0 1%); /* Adjusted for better mobile fit */
+        width: 70%; /* Adjusted width for better mobile fit */
+        clip-path: circle(150% at 0 50%); /* Circle transition for opening effect */
+        animation: expand 0.5s forwards; /* Adding animation */
     }
 }
