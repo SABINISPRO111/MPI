@@ -169,14 +169,14 @@ header {
 }
 
 /* Media Queries for Mobile Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .side-menu {
         width: 0;
-        clip-path: circle(0% at 0 50%);
+        clip-path: circle(0% at 0 25%);
     }
 
     .side-menu.open {
-        width: 70%; /* Adjusted width for better mobile fit */
-        clip-path: circle(70% at 0 50%); /* Adjusted for better mobile fit */
+        width: 15%; /* Adjusted width for better mobile fit */
+        clip-path: circle(5% at 0 1%); /* Adjusted for better mobile fit */
     }
 }
