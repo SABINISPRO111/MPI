@@ -8,12 +8,19 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <img src="images/logo.png" alt="Logo" class="logo">
-            <div class="title">School Name</div>
-            <button class="menu-btn" onclick="toggleMenu()">&#9776;</button>
-        </header>
-        <div id="sideMenu" class="side-menu">
+        <div class="header">
+            <div class="header-content">
+                <img src="logo.png" alt="Logo" class="logo">
+                <span class="title">Mechinagar Polytechnic Institute</span>
+                <button class="menu-btn" onclick="toggleMenu()">☰</button>
+            </div>
+        </div>
+        <div class="intro">
+            <h1>Study Is Future...</h1>
+            <p>Start Study For Knowledge Not For Time Pass</p>
+            <button class="start-btn">Start Learning</button>
+        </div>
+        <div class="side-menu" id="sideMenu">
             <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">&times;</a>
             <a href="#">HOME</a>
             <a href="#">ABOUT US</a>
@@ -23,53 +30,41 @@
             <a href="#">CONTACT US</a>
             <a href="#">LOGIN / SIGNUP</a>
             <div class="menu-footer">
-                <p>APP VERSION</p>
-                <p>1.0.0.1</p>
+                <span>APP VERSION 1.0.0.1</span>
             </div>
         </div>
-        <div id="overlay" class="overlay" onclick="toggleMenu()"></div>
-        <main>
-            <section class="intro">
-                <h1>Study Is Fature....</h1>
-                <p>Start Study For Knowledge Not For Time Pass</p>
-                <button class="start-btn">Start Learning</button>
-            </section>
-            <section class="welcome">
-                <h2>Hi, UserName ;)</h2>
-                <p>What Do You Want To Today ?</p>
-                <div class="options">
-                    <div class="option-row">
-                        <div class="option">
-                            <img src="images/video.png" alt="Video Lecture">
-                            <p>Video Lecture</p>
-                        </div>
-                        <div class="option">
-                            <img src="images/notes.png" alt="Notes">
-                            <p>Notes</p>
-                        </div>
+        <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+        <div class="welcome">
+            <p style="color: #4781A1;">Hi, What Do You Want To Today?</p>
+            <div class="options">
+                <div class="option-row">
+                    <div class="option">
+                        <img src="notice.png" alt="Notice">
+                        <p style="margin-top: 0;">Notice</p>
                     </div>
-                    <div class="option-row">
-                        <div class="option">
-                            <img src="images/pyqs.png" alt="PYQS">
-                            <p>PYQS</p>
-                        </div>
-                        <div class="option">
-                            <img src="images/problems.png" alt="Solving Problems">
-                            <p>Solving Problems</p>
-                        </div>
+                    <div class="option">
+                        <img src="notes.png" alt="Notes">
+                        <p style="margin-top: 0;">Notes</p>
                     </div>
                 </div>
-            </section>
-            <section class="subjects">
-                <!-- Subjects content will go here -->
-            </section>
-        </main>
-        <nav class="bottom-nav">
-            <a href="#home">Home</a>
-            <a href="#quiz">Quiz</a>
-            <a href="#books">Books</a>
-            <a href="#profile">Profile</a>
-        </nav>
+                <div class="option-row">
+                    <div class="option">
+                        <img src="attendence.png" alt="Attendence">
+                        <p style="margin-top: 0;">Attendence</p>
+                    </div>
+                    <div class="option">
+                        <img src="chat.png" alt="Chat">
+                        <p style="margin-top: 0;">Chat</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-nav">
+            <a href="#">Home</a>
+            <a href="#">Quiz</a>
+            <a href="#">Books</a>
+            <a href="#">Profile</a>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
