@@ -5,33 +5,43 @@ body {
     background: linear-gradient(to bottom, #8a2be2, #4b0082);
     color: white;
     text-align: center;
-    overflow: hidden; /* Hide overflow to prevent scroll during menu animation */
+    overflow-x: hidden;
 }
 
 .container {
     width: 100%;
-    max-width: 400px;
+    max-width: 360px;
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
+    position: relative; /* Add this to position the container */
 }
 
-header {
+.header {
+    margin-top: -20px;
+    background: linear-gradient(to right, #8DAFE2 0%, #8292BB 54%, #6052B6 100%);
+    border-bottom-left-radius: 20px;
+    width: 100%;
+    height: 37px;
+    border-bottom-right-radius: 20px;
+    position: relative; /* Add position */
+    z-index: 2; /* Higher z-index to bring it in front */
+}
+
+.header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    background-color: #333;
-    border-radius: 10px;
 }
 
 .logo {
-    width: 40px; /* Adjust as needed */
-    height: 40px; /* Adjust as needed */
+    margin-left: 15px;
+    width: 25px;
+    height: 25px;
 }
 
 .title {
-    font-size: 1.2em;
+    font-size: 12;
 }
 
 .menu-btn {
@@ -42,11 +52,36 @@ header {
     cursor: pointer;
 }
 
+.intro {
+    margin-top: -35px;
+    width: 100%;
+    height: 279px;
+    background-color: #8180B6;
+    position: relative; /* Add position */
+    z-index: 1; /* Lower z-index to send it behind */
+    align-content: center;
+}
+
+.intro h1 {
+    margin: 20px 0 10px;
+    font-size: 18;
+}
+
+.start-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #00f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 .side-menu {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 2;
+    z-index: 5;
     top: 0;
     left: 0;
     background-color: rgba(75, 0, 130, 0.9);
@@ -54,13 +89,13 @@ header {
     transition: width 0.5s ease-in-out, clip-path 0.5s ease-in-out;
     padding-top: 60px;
     color: white;
-    clip-path: circle(0% at 0 50%); /* Initial clip path */
+    clip-path: circle(0% at 0 50%);
 }
 
 .side-menu.open {
-    width: 75%; /* Adjust this value to control the width of the sidenav overlay */
-    clip-path: circle(150% at 0 50%); /* Circle transition for opening effect */
-    animation: expand 0.5s forwards; /* Adding animation */
+    width: 70%;
+    clip-path: circle(150% at 0 50%);
+    animation: expand 0.5s forwards;
 }
 
 @keyframes expand {
@@ -68,7 +103,7 @@ header {
         clip-path: circle(0% at 0 50%);
     }
     100% {
-        clip-path: inset(0 0 0 0); /* Transition to rectangular shape */
+        clip-path: inset(0 0 0 0);
     }
 }
 
@@ -116,28 +151,14 @@ header {
     display: block;
 }
 
-.intro {
-    margin-top: 20px;
-    background-color: #4b0082;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.start-btn {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #00f;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
 .welcome {
-    margin-top: 20px;
+    margin-top: -40px;
     padding: 20px;
-    background-color: #4b0082;
-    border-radius: 10px;
+    background-color: #ffffff;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    position: relative;
+    z-index: 2;
 }
 
 .options {
@@ -153,11 +174,14 @@ header {
 }
 
 .option {
-    background-color: #333;
+    background:linear-gradient(to right, #8DAFE2 0%, #8292BB 54%, #6052B6 100%);
     padding: 10px;
     flex: 1;
     text-align: center;
-    clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+    clip-path: rectangle;
+    border-radius: 25px;
+    width: 120px;
+    height: 78px;
 }
 
 .option img {
@@ -168,9 +192,10 @@ header {
     display: flex;
     justify-content: space-around;
     padding: 10px;
-    background-color: #333;
-    border-radius: 10px;
-    margin-top: 20px;
+    background:linear-gradient(to right, #8DAFE2 0%, #8292BB 47%, #5280B6 100%);
+    margin-top: -12px;
+    position: relative;
+    z-index: 3;
 }
 
 .bottom-nav a {
@@ -186,8 +211,8 @@ header {
     }
 
     .side-menu.open {
-        width: 70%; /* Adjusted width for better mobile fit */
-        clip-path: circle(150% at 0 50%); /* Circle transition for opening effect */
-        animation: expand 0.5s forwards; /* Adding animation */
+        width: 70%;
+        clip-path: circle(150% at 0 50%);
+        animation: expand 0.5s forwards;
     }
 }
