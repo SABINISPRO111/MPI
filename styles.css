@@ -51,16 +51,25 @@ header {
     left: 0;
     background-color: rgba(75, 0, 130, 0.9);
     overflow-x: hidden;
-    transition: transform 0.5s ease-in-out, clip-path 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out, clip-path 0.5s ease-in-out;
     padding-top: 60px;
     color: white;
-    clip-path: inset(0 100% 0 0); /* Initial clip path */
+    clip-path: circle(0% at 0 50%); /* Initial clip path */
 }
 
 .side-menu.open {
-    width: 70%; /* Adjust this value to control the width of the sidenav overlay */
-    transform: translateX(0);
-    clip-path: inset(0 0 0 0); /* Final rectangular shape */
+    width: 75%; /* Adjust this value to control the width of the sidenav overlay */
+    clip-path: circle(150% at 0 50%); /* Circle transition for opening effect */
+    animation: expand 0.5s forwards; /* Adding animation */
+}
+
+@keyframes expand {
+    0% {
+        clip-path: circle(0% at 0 50%);
+    }
+    100% {
+        clip-path: inset(0 0 0 0); /* Transition to rectangular shape */
+    }
 }
 
 .side-menu a {
@@ -173,11 +182,12 @@ header {
 @media (max-width: 768px) {
     .side-menu {
         width: 0;
-        clip-path: inset(0 100% 0 0);
+        clip-path: circle(0% at 0 50%);
     }
 
     .side-menu.open {
         width: 70%; /* Adjusted width for better mobile fit */
-        clip-path: inset(0 0 0 0); /* Rectangular shape after opening */
+        clip-path: circle(150% at 0 50%); /* Circle transition for opening effect */
+        animation: expand 0.5s forwards; /* Adding animation */
     }
 }
